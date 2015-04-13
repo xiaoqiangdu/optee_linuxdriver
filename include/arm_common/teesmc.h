@@ -9,10 +9,6 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program; if not, write to the Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 #ifndef TEESMC_H
 #define TEESMC_H
@@ -81,6 +77,8 @@
 #define TEESMC_ATTR_CACHE_O_WRITE_THR	0x4
 #define TEESMC_ATTR_CACHE_O_WRITE_BACK	0x8
 
+#define TEESMC_ATTR_CACHE_NONCACHE	(TEESMC_ATTR_CACHE_I_NONCACHE | \
+					 TEESMC_ATTR_CACHE_O_NONCACHE)
 #define TEESMC_ATTR_CACHE_DEFAULT	(TEESMC_ATTR_CACHE_I_WRITE_BACK | \
 					 TEESMC_ATTR_CACHE_O_WRITE_BACK)
 

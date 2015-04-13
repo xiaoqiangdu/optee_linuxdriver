@@ -9,10 +9,6 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program; if not, write to the Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 #ifndef TEESMC_ST_H
 #define TEESMC_ST_H
@@ -47,10 +43,10 @@
 			TEESMC_ST_FUNCID_GET_SHM_CONFIG)
 
 /*
- * Configures L2CC mutex
+ * Configures TZ/NS shared mutex for outer cache maintenance
  *
- * Disables, enables usage of L2CC mutex. Returns or sets physical address
- * of L2CC mutex.
+ * Disables, enables usage of outercache mutex.
+ * Returns or sets physical address of outercache mutex.
  *
  * Call register usage:
  * r0	SMC Function ID, TEESMC32_ST_FASTCALL_L2CC_MUTEX

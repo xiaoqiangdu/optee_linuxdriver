@@ -9,17 +9,16 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program; if not, write to the Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-#ifndef TEE_DEBUG_H
-#define TEE_DEBUG_H
+#ifndef __TEE_DEBUGFS_H__
+#define __TEE_DEBUGFS_H__
 
-int tee_debug_init(struct device *dev);
-void tee_debug_remove(struct device *dev);
+struct tee;
 
-extern const struct file_operations tee_debug_fops_tee_tz;
+void tee_create_debug_dir(struct tee *tee);
+void tee_delete_debug_dir(struct tee *tee);
 
-#endif /* TEE_DEBUG_H */
+void __init tee_init_debugfs(void);
+void __exit tee_exit_debugfs(void);
+
+#endif /* __TEE_DEBUGFS_H__ */
